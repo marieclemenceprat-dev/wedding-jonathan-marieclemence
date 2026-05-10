@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mariage au Château de Vallery | 10-12 Septembre 2026</title>
+  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;600&display=swap)" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Écran d'authentification -->
+  <div id="auth-screen" class="auth-overlay">
+    <div class="auth-box">
+      <div class="auth-content" data-lang="fr">
+        <h2>Bienvenue</h2>
+        <p>Pour accéder au site, veuillez entrer le mot de passe communiqué après validation de votre invitation.</p>
+        <input type="password" id="password" placeholder="Mot de passe">
+        <button onclick="checkAccess()">Entrer</button>
+        <p class="error" id="error-msg"></p>
+      </div>
+      <div class="auth-content" data-lang="en" style="display:none;">
+        <h2>Welcome</h2>
+        <p>To access the website, please enter the password provided after confirming your invitation.</p>
+        <input type="password" id="password-en" placeholder="Password">
+        <button onclick="checkAccess()">Enter</button>
+        <p class="error" id="error-msg-en"></p>
+      </div>
+      <div class="auth-lang-switch">
+        <button onclick="switchAuthLang('fr')" class="active">FR</button>
+        <button onclick="switchAuthLang('en')">EN</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenu principal (masqué par défaut) -->
+  <main id="main-content" style="display:none;">
+    
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="#" data-fr="Accueil" data-en="Home">Accueil</a></li>
+        <li><a href="lieu.html" data-fr="Le lieu" data-en="Venue">Le lieu</a></li>
+        <li><a href="hebergements.html" data-fr="Hébergements" data-en="Accommodations">Hébergements</a></li>
+        <li><a href="programme.html" data-fr="Programme" data-en="Schedule">Programme</a></li>
+        <li><a href="cagnotte.html" data-fr="Cagnotte" data-en="Gift">Cagnotte</a></li>
+      </ul>
+      <div class="lang-switch">
+        <button onclick="setLang('fr')" class="active">FR</button>
+        <button onclick="setLang('en')">EN</button>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <p class="subtitle" data-fr="Nous nous marions" data-en="We're getting married">Nous nous marions</p>
+      <h1>[Prénom] & [Prénom]</h1>
+      <p class="date">10 – 12 Septembre 2026</p>
+      <p class="location" data-fr="Château de Vallery, Yonne" data-en="Château de Vallery, Burgundy">Château de Vallery, Yonne</p>
+    </section>
+
+    <section class="intro container">
+      <p data-fr="Nous sommes ravis de vous convier à célébrer notre union lors d'un week-end au cœur de la Bourgogne. Vous trouverez ici toutes les informations pratiques pour ces trois jours de festivités."
+         data-en="We are delighted to invite you to celebrate our union during a weekend in the heart of Burgundy. Here you will find all the practical information for these three days of festivities.">
+        Nous sommes ravis de vous convier à célébrer notre union lors d'un week-end au cœur de la Bourgogne. Vous trouverez ici toutes les informations pratiques pour ces trois jours de festivités.
+      </p>
+    </section>
+
+  </main>
+
+  <script src="js/auth.js"></script>
+  <script src="js/lang.js"></script>
+</body>
+</html>

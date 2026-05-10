@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mariage de Jonathan & Marie‑Clémence | Château de Vallery</title>
+  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;600&display=swap)" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Écran d'authentification -->
+  <div id="auth-screen" class="auth-overlay">
+    <div class="auth-box">
+      <div class="auth-content" data-lang="fr">
+        <h2>Bienvenue</h2>
+        <p>Ce site est réservé aux invités ayant complété leur invitation. Veuillez entrer le mot de passe reçu après votre validation.</p>
+        <input type="password" id="password" placeholder="Mot de passe">
+        <button onclick="checkAccess()">Entrer</button>
+        <p class="error" id="error-msg"></p>
+      </div>
+
+      <div class="auth-content" data-lang="en" style="display:none;">
+        <h2>Welcome</h2>
+        <p>This website is reserved for guests who confirmed their attendance. Please enter the password provided after your invitation was validated.</p>
+        <input type="password" id="password-en" placeholder="Password">
+        <button onclick="checkAccess()">Enter</button>
+        <p class="error" id="error-msg-en"></p>
+      </div>
+
+      <div class="auth-lang-switch">
+        <button onclick="switchAuthLang('fr')" class="active">FR</button>
+        <button onclick="switchAuthLang('en')">EN</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenu principal -->
+  <main id="main-content" style="display:none;">
+
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+        <li><a href="lieu.html" data-fr="Le lieu" data-en="Venue">Le lieu</a></li>
+        <li><a href="hebergements.html" data-fr="Hébergements" data-en="Accommodations">Hébergements</a></li>
+        <li><a href="programme.html" data-fr="Programme" data-en="Schedule">Programme</a></li>
+        <li><a href="cagnotte.html" data-fr="Cagnotte" data-en="Gift">Cagnotte</a></li>
+      </ul>
+      <div class="lang-switch">
+        <button onclick="setLang('fr')" class="active">FR</button>
+        <button onclick="setLang('en')">EN</button>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <h1>Jonathan & Marie‑Clémence</h1>
+      <p class="date">10 – 12 Septembre 2026</p>
+      <p class="location" data-fr="Château de Vallery, Yonne" data-en="Château de Vallery, Burgundy">Château de Vallery, Yonne</p>
+    </section>
+
+    <section class="intro container">
+      <p data-fr="Nous sommes ravis de vous convier à célébrer notre mariage lors d’un week-end au cœur de la Bourgogne. Vous trouverez ici toutes les informations concernant l’hébergement, les accès, les horaires et les moments forts."
+         data-en="We are delighted to invite you to celebrate our wedding during a three-day celebration in the heart of Burgundy. Here you will find all information regarding accommodations, access, schedules, and key moments.">
+        Nous sommes ravis de vous convier à célébrer notre mariage lors d’un week-end au cœur de la Bourgogne. Vous trouverez ici toutes les informations concernant l’hébergement, les accès, les horaires et les moments forts.
+      </p>
+    </section>
+
+    <!-- Section Lieu avec extraits du site officiel -->
+    <section class="venue-highlight container">
+      <h2 data-fr="Le Château de Vallery" data-en="Château de Vallery">Le Château de Vallery</h2>
+
+      <p data-fr="Lieu emblématique de la Renaissance, le Château de Vallery est restauré depuis 199
