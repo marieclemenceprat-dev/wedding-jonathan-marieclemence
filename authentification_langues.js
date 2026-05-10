@@ -1,4 +1,4 @@
-const CORRECT_PASSWORD = 'VotreMotDePasse2026'; // À personnaliser
+const CORRECT_PASSWORD = 'Vallery2026'; // À personnaliser
 
 function checkAccess() {
   const pwdFr = document.getElementById('password').value;
